@@ -1,0 +1,348 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.1">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="90" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="54">D:\dadabi\Final Project\IMDB\IMDB\SCD2 Data\newdata_name_basics.json</File>
+          <FormatSpecificOptions>
+            <SingleField>True</SingleField>
+            <CodePage>65001</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>newdata_name_basics.json</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JSON_Name" size="1073741823" source="JSON_Input: " type="V_WString" />
+            <Field name="JSON_ValueString" size="1073741823" source="JSON_Input: " type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="210" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\Shreyasi\AppData\Local\Temp\Engine_2572_aa6e5dc65dee3d4eba64be968bdd8aaa_\Engine_2572_1d940883ea751f449f05c1c2b24f7603~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="29">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="186" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>JSON_Name</Field>
+          <ErrorHandling>Last</ErrorHandling>
+          <RootName>
+          </RootName>
+          <Delimeters value="." />
+          <NumFields value="2" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="282" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="JSON_Name" selected="True" />
+            <SelectField field="JSON_ValueString" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BasicDataProfile.BasicDataProfile">
+        <Position x="582" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Limit_UniqueCount>10000</Limit_UniqueCount>
+          <Limit_UniqueValuesSize>1000</Limit_UniqueValuesSize>
+          <IsMetric value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBasicDataProfile" />
+    </Node>
+    <Node ToolID="39">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="666" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\Shreyasi\AppData\Local\Temp\Engine_14876_77b6fe66e16d7c4dbd455c9446ddca2f_\Engine_14876_cd2327d1a845a745808cbf18ab60c38b~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="40">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="498" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="41">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="366" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields>
+            <Field field="JSON_Name" />
+          </GroupFields>
+          <HeaderField field="JSON_Name" />
+          <DataField field="JSON_ValueString" />
+          <Methods>
+            <Method method="Concat" />
+            <Separator>,</Separator>
+            <FieldSize value="2048" />
+          </Methods>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JSON_Name" size="1073741823" source="CrossTab:Group:Concat:" type="V_WString" />
+            <Field name="0_birthYear" size="2048" source="CrossTab:Header:JSON_Name:0.birthYear:Concat:" type="V_WString" />
+            <Field name="0_deathYear" size="2048" source="CrossTab:Header:JSON_Name:0.deathYear:Concat:" type="V_WString" />
+            <Field name="0_knownForTitles" size="2048" source="CrossTab:Header:JSON_Name:0.knownForTitles:Concat:" type="V_WString" />
+            <Field name="0_nconst" size="2048" source="CrossTab:Header:JSON_Name:0.nconst:Concat:" type="V_WString" />
+            <Field name="0_primaryName" size="2048" source="CrossTab:Header:JSON_Name:0.primaryName:Concat:" type="V_WString" />
+            <Field name="0_primaryProfession" size="2048" source="CrossTab:Header:JSON_Name:0.primaryProfession:Concat:" type="V_WString" />
+            <Field name="1_birthYear" size="2048" source="CrossTab:Header:JSON_Name:1.birthYear:Concat:" type="V_WString" />
+            <Field name="1_deathYear" size="2048" source="CrossTab:Header:JSON_Name:1.deathYear:Concat:" type="V_WString" />
+            <Field name="1_knownForTitles" size="2048" source="CrossTab:Header:JSON_Name:1.knownForTitles:Concat:" type="V_WString" />
+            <Field name="1_nconst" size="2048" source="CrossTab:Header:JSON_Name:1.nconst:Concat:" type="V_WString" />
+            <Field name="1_primaryName" size="2048" source="CrossTab:Header:JSON_Name:1.primaryName:Concat:" type="V_WString" />
+            <Field name="1_primaryProfession" size="2048" source="CrossTab:Header:JSON_Name:1.primaryProfession:Concat:" type="V_WString" />
+            <Field name="2_birthYear" size="2048" source="CrossTab:Header:JSON_Name:2.birthYear:Concat:" type="V_WString" />
+            <Field name="2_deathYear" size="2048" source="CrossTab:Header:JSON_Name:2.deathYear:Concat:" type="V_WString" />
+            <Field name="2_knownForTitles" size="2048" source="CrossTab:Header:JSON_Name:2.knownForTitles:Concat:" type="V_WString" />
+            <Field name="2_nconst" size="2048" source="CrossTab:Header:JSON_Name:2.nconst:Concat:" type="V_WString" />
+            <Field name="2_primaryName" size="2048" source="CrossTab:Header:JSON_Name:2.primaryName:Concat:" type="V_WString" />
+            <Field name="2_primaryProfession" size="2048" source="CrossTab:Header:JSON_Name:2.primaryProfession:Concat:" type="V_WString" />
+            <Field name="3_birthYear" size="2048" source="CrossTab:Header:JSON_Name:3.birthYear:Concat:" type="V_WString" />
+            <Field name="3_deathYear" size="2048" source="CrossTab:Header:JSON_Name:3.deathYear:Concat:" type="V_WString" />
+            <Field name="3_knownForTitles" size="2048" source="CrossTab:Header:JSON_Name:3.knownForTitles:Concat:" type="V_WString" />
+            <Field name="3_nconst" size="2048" source="CrossTab:Header:JSON_Name:3.nconst:Concat:" type="V_WString" />
+            <Field name="3_primaryName" size="2048" source="CrossTab:Header:JSON_Name:3.primaryName:Concat:" type="V_WString" />
+            <Field name="3_primaryProfession" size="2048" source="CrossTab:Header:JSON_Name:3.primaryProfession:Concat:" type="V_WString" />
+            <Field name="4_birthYear" size="2048" source="CrossTab:Header:JSON_Name:4.birthYear:Concat:" type="V_WString" />
+            <Field name="4_deathYear" size="2048" source="CrossTab:Header:JSON_Name:4.deathYear:Concat:" type="V_WString" />
+            <Field name="4_DI_CreateDatetime" size="2048" source="CrossTab:Header:JSON_Name:4.DI_CreateDatetime:Concat:" type="V_WString" />
+            <Field name="4_DI_JobId" size="2048" source="CrossTab:Header:JSON_Name:4.DI_JobId:Concat:" type="V_WString" />
+            <Field name="4_DI_JobName" size="2048" source="CrossTab:Header:JSON_Name:4.DI_JobName:Concat:" type="V_WString" />
+            <Field name="4_knownForTitles" size="2048" source="CrossTab:Header:JSON_Name:4.knownForTitles:Concat:" type="V_WString" />
+            <Field name="4_nconst" size="2048" source="CrossTab:Header:JSON_Name:4.nconst:Concat:" type="V_WString" />
+            <Field name="4_primaryName" size="2048" source="CrossTab:Header:JSON_Name:4.primaryName:Concat:" type="V_WString" />
+            <Field name="4_primaryProfession" size="2048" source="CrossTab:Header:JSON_Name:4.primaryProfession:Concat:" type="V_WString" />
+            <Field name="5_birthYear" size="2048" source="CrossTab:Header:JSON_Name:5.birthYear:Concat:" type="V_WString" />
+            <Field name="5_deathYear" size="2048" source="CrossTab:Header:JSON_Name:5.deathYear:Concat:" type="V_WString" />
+            <Field name="5_knownForTitles" size="2048" source="CrossTab:Header:JSON_Name:5.knownForTitles:Concat:" type="V_WString" />
+            <Field name="5_nconst" size="2048" source="CrossTab:Header:JSON_Name:5.nconst:Concat:" type="V_WString" />
+            <Field name="5_primaryName" size="2048" source="CrossTab:Header:JSON_Name:5.primaryName:Concat:" type="V_WString" />
+            <Field name="5_primaryProfession" size="2048" source="CrossTab:Header:JSON_Name:5.primaryProfession:Concat:" type="V_WString" />
+            <Field name="6_birthYear" size="2048" source="CrossTab:Header:JSON_Name:6.birthYear:Concat:" type="V_WString" />
+            <Field name="6_deathYear" size="2048" source="CrossTab:Header:JSON_Name:6.deathYear:Concat:" type="V_WString" />
+            <Field name="6_knownForTitles" size="2048" source="CrossTab:Header:JSON_Name:6.knownForTitles:Concat:" type="V_WString" />
+            <Field name="6_nconst" size="2048" source="CrossTab:Header:JSON_Name:6.nconst:Concat:" type="V_WString" />
+            <Field name="6_primaryName" size="2048" source="CrossTab:Header:JSON_Name:6.primaryName:Concat:" type="V_WString" />
+            <Field name="6_primaryProfession" size="2048" source="CrossTab:Header:JSON_Name:6.primaryProfession:Concat:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="486" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\Shreyasi\AppData\Local\Temp\Engine_2572_aa6e5dc65dee3d4eba64be968bdd8aaa_\Engine_2572_0715372dcde13a41aac003df5b528dfc~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="39" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Json_Profiling</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="f26bbb8c-b240-43ef-8d39-c72ec52f5484" />
+      <Telemetry>
+        <PreviousWorkflowId value="956ec0af-413a-4f0f-a7d5-c7aaff48aaef" />
+        <OriginWorkflowId value="956ec0af-413a-4f0f-a7d5-c7aaff48aaef" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
